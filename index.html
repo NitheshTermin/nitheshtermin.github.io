@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithesh Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/NitheshHeader2.png" alt="It's me">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav"> 
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+                <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                <li class="nav__item"><a href="#education" class="nav__link">My Education</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <!-- Introduction -->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Hi, I am <strong>Nithesh R</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">full-stack dev</p>
+        <img class="intro__img profile_image" src="img/NitheshDev.JPG" alt="a picture of Nithesh">
+    </section>
+
+    <!-- My services -->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">What I do</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Frontend</h3>
+                <p>Develop responsive single page web applications using angular.
+                    Proficent in HTML, CSS, Javascript, TypeScript & node.js.
+                    Basic knowledge on WPF applications.
+                </p>
+            </div>
+            <div class="service">
+                <h3>Backend</h3>
+                <p>Experiensed in developing scalable robust Rest API's in C#, Asp.Net Core.
+                    Basic knowledge on developing API's in Express, Node.js
+                </p>
+            </div>
+            <div class="service">
+                <h3>Docker</h3>
+                <p>Proficent in containerizing WebBackned(Windows) & FrontEnd(Web) applications.
+                    Experienced in kubernetes orchestration.
+                </p>
+            </div>
+            <div class="service">
+                <h3>Cloud</h3>
+                <p>Predominently worked on Azure cloud. Worked on serverless application, Managing the 
+                    CI/CD pipeline in Azure DevOps.
+                </p>
+            </div>
+        </div>
+        <a href="#work" class="btn">My Work</a>
+    </section>
+
+    <!-- About me -->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Who I am</h2>
+        <p class="section__subtitle section__subtitle--about">Full-stack developer based out of Bangalore</p>
+        <div class="about-me__body">
+            <p>Focused professional and passionate developer with 4.6+ years of full stack development
+                and a proven knowledge of application development and troubleshooting. Aiming to leverage
+                my skills to successfully fill the developer role at your organization.
+            </p>
+        </div>
+        <img class="about-me__img" src="img/Nithesh_Skills_small.jpg" alt="">
+    </section>
+
+    <!-- My Wordk -->
+    
+    <section class="my-work" id="work">
+        <h2 class="section__title section__title--work">My work</h2>
+        <p class="section__subtitle section__subtitle--work"></p>
+        <div class="portfolio">
+            <div class="tenure">Aug 2016 - Jan 2020</div>
+            <div class="experience">
+                <h3 class="designation">Software Developer</h2>
+                <h3 class="company">Eurofins IT Solutions India Pvt Ltd, Bengalore, Karnataka</h1>
+                <div class="tasks">
+                    <ul>
+                        <li>
+                            <h4>Develop next generation LIMS(Laboratory Information
+                                Management Systems).
+                            </h4>
+                            </li>
+                            <li>
+                                <h4>Developed & maintain Windows & Web application for various
+                                    laboratories across different geographies.
+                                </h4>
+                            </li>
+                            <li>
+                                <h4>Designed & developed <strong>Calculation Engine</strong> service
+                                    which is used for calculating results for microbiology test with 100%
+                                    precession. By designing various algorithms.</h4>
+                            </li>
+                            <li>
+                                <h4>Write maintainable code with >90% code coverage.</h4>
+                            </li>
+                            <li>
+                                <h4>Automated build & release through TFS.</h4>
+                            </li>
+                            <li>
+                                <h4>Follow agile-scrum practices with planed deliverable's at the end
+                                    of sprint.
+                                </h4>
+                            </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="portfolio">
+            <div class="tenure">Jan 2020 - Present</div>
+            <div class="experience">
+                <h3 class="designation">Software Developer</h2>
+                <h3 class="company">Siemens Healthineers, Bengalore, Karnataka</h1>
+                <div class="tasks">
+                    <ul>
+                        <li>
+                            <h4>Develop highly scalable radiological findings application.
+                            </h4>
+                        </li>
+                        <li>
+                            <h4>Migrated monolithic application to microservices.
+                            </h4>
+                        </li>
+                        <li>
+                            <h4>Containerized AI algorithm execution & webBackend.</h4>
+                        </li>
+                        <li>
+                            <h4>Worked on cornerstone library to render DICOM images in angular.</h4>
+                        </li>
+                        <li>
+                            <h4>Automated build & release through Azure Devops.</h4>
+                        </li>
+                        <li>
+                            <h4>Worked on docker & managed container orchestration via kubernetes.
+                            </h4>
+                        </li>
+                        <li>
+                            <h4>
+                                Worked on Azure cloud infrastructure.
+                            </h4>
+                        </li>
+                        <li>
+                            <h4>
+                                Desigend application to run in cloud & local on premise environment.
+                            </h4>
+                        </li>
+                        <li>
+                            <h4>Write maintainable code with >95% code coverage.</h4>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- My education -->
+    <section class="my-education" id="education">
+        <h2 class="section__title section__title--education">My Education</h2>
+        <div class="education-details">
+            <div class="college">MVJ College of Engineering</div>
+            <h4 class="location">Bengaluru, Karnataka</h2>
+            <h4 class="specilazation">Bachelor of Engineering Computer Science (Jul 2016). <strong>76%</strong></h2>
+        </div>
+    </section>
+    <!-- <section class="my-work" id="work">
+        <h2 class="section__title section__title--work">My work</h2>
+        <p class="section__subtitle section__subtitle--work"></p>
+        <div class="portfolio">
+            <a href="#" class="portfolio__item">
+                <img src="img/portfolio-details.jpg" alt="" class="portfolio__img">
+            </a>
+            <a href="#" class="portfolio__item">
+                <img src="img/portfolio-details.jpg" alt="" class="portfolio__img">
+            </a>
+            <a href="#" class="portfolio__item">
+                <img src="img/portfolio-details.jpg" alt="" class="portfolio__img">
+            </a>
+            <a href="#" class="portfolio__item">
+                <img src="img/portfolio-details.jpg" alt="" class="portfolio__img">
+            </a>
+        </div>
+    </section> -->
+    <footer class="footer">
+        <a href="mailto:nitheshtermin@gmail.com" class="footer__link">nitheshtermin@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link"
+                    href="https://www.linkedin.com/in/nithesh-r-9a660517a/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/NitheshTermin">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link"
+                    href="https://stackoverflow.com/users/6878459/nithesh-termin">
+                    <i class="fab fa-stack-overflow"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>
