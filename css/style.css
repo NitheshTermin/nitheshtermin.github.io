@@ -59,7 +59,7 @@ h4 { font-size: 1.1rem; font-weight: 650; }
 .hero .button:hover { background: #c4f4e3; }
 .hero a:hover { color: #a4e3cd; }
 .hero .button:hover { color: #101f33; }
-.portrait-card { width: 100%; max-width: 27rem; margin: 0; justify-self: center; overflow: hidden; background: #14283d; border: 1px solid #88b8c455; border-radius: 18px; box-shadow: 0 24px 70px #00000030; }
+.portrait-card { width: 100%; max-width: 16rem; margin: 0; justify-self: center; overflow: hidden; background: #14283d; border: 1px solid #88b8c455; border-radius: 18px; box-shadow: 0 24px 70px #00000030; }
 .portrait-card img { display: block; width: 100%; height: auto; }
 .portrait-card figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; align-items: center; padding: 1rem 1.2rem; border-top: 1px solid #88b8c426; color: #e4edf7; font-size: .85rem; }
 .portrait-card figcaption > span:last-child { color: #a4e3cd; font: .65rem ui-monospace, Consolas, monospace; }
@@ -119,6 +119,8 @@ h4 { font-size: 1.1rem; font-weight: 650; }
 .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
 .about-copy { font-size: 1rem; margin-top: 1.5rem; }
 .about-copy p + p { margin-top: 1rem; }
+.personal-note { border-left: 2px solid var(--accent); padding: .7rem 1rem; background: var(--soft); border-radius: 0 6px 6px 0; font-size: .9rem; }
+.personal-note > span { display: block; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; font-size: .65rem; font-weight: 700; margin-bottom: .2rem; }
 .experience-section, .credentials-section { background: var(--soft); border-block: 1px solid var(--line); }
 .section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; margin-bottom: 2.5rem; }
 .section-heading > p { font-size: .9rem; color: var(--muted); }
