@@ -1,3 +1,16 @@
+function formatExperience(startYear, startMonth, currentDate = new Date()) {
+    const totalMonths = (currentDate.getFullYear() - startYear) * 12
+        + currentDate.getMonth() + 1 - startMonth;
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+    const yearText = `${years} ${years === 1 ? 'year' : 'years'}`;
+    return months === 0 ? yearText : `${yearText}, ${months} ${months === 1 ? 'month' : 'months'}`;
+}
+
+const [careerStartYear, careerStartMonth] = document.querySelector('#career-start').dateTime.split('-').map(Number);
+document.querySelector('#experience').textContent =
+    `${formatExperience(careerStartYear, careerStartMonth)} of professional experience`;
+
 const header = document.querySelector('.site-header');
 const navigation = document.querySelector('#navigation');
 const toggle = document.querySelector('.nav-toggle');

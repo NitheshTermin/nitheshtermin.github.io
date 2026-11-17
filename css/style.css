@@ -50,6 +50,7 @@ h4 { font-size: 1.1rem; font-weight: 650; }
 .hero-statement { font-size: clamp(2.2rem, 4vw, 3.5rem); letter-spacing: -.045em; line-height: 1.15; margin-top: 1.5rem; color: white; font-weight: 650; }
 .hero-statement > span { color: #a4e3cd; }
 .hero-description { max-width: 34rem; margin-top: 1.5rem; color: #bdccde; font-size: 1.05rem; }
+.experience-summary { margin-top: 1rem; color: #a4e3cd; font-size: .95rem; font-weight: 600; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin-top: 2.2rem; }
 .button { display: inline-flex; gap: 1.5rem; align-items: center; background: var(--navy); color: white; padding: .85rem 1.2rem; border-radius: 6px; font-weight: 600; font-size: .9rem; text-decoration: none; }
 .button:hover { color: white; background: #284b70; }
