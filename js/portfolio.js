@@ -41,3 +41,71 @@ header.addEventListener('focusout', event => {
 mobileLayout.addEventListener('change', updateNavigationLayout);
 header.classList.add('nav-enhanced');
 updateNavigationLayout();
+
+const layerButtons = document.querySelectorAll('[data-layer]');
+const layerPanels = document.querySelectorAll('.layer-panel');
+const explorerStatus = document.querySelector('.explorer-status');
+
+function selectLayer(button) {
+    layerButtons.forEach(control => {
+        control.setAttribute('aria-pressed', String(control === button));
+    });
+    layerPanels.forEach(panel => {
+        panel.hidden = panel.id !== button.getAttribute('aria-controls');
+    });
+    explorerStatus.textContent = `Exploring ${button.querySelector('strong').textContent.toLowerCase()}. Details updated.`;
+}
+
+layerButtons.forEach(button => {
+    button.addEventListener('click', () => selectLayer(button));
+});
+
+document.querySelectorAll('[data-explore-layer]').forEach(link => {
+    link.addEventListener('click', () => {
+        const button = [...layerButtons].find(control => control.dataset.layer === link.dataset.exploreLayer);
+        selectLayer(button);
+    });
+});
+
+layerPanels.forEach((panel, index) => {
+    panel.hidden = index !== 0;
+});
+document.querySelector('.explorer-layout').classList.add('is-interactive');
+document.querySelector('.layer-controls').hidden = false;
+
+const focusButtons = document.querySelectorAll('[data-focus]');
+const experienceItems = document.querySelectorAll('[data-focus-areas]');
+const experienceCards = document.querySelectorAll('.experience-card');
+const filterStatus = document.querySelector('.filter-status');
+
+function filterExperience(button) {
+    const focus = button.dataset.focus;
+    focusButtons.forEach(control => {
+        control.setAttribute('aria-pressed', String(control === button));
+    });
+    experienceItems.forEach(item => {
+        item.hidden = focus !== 'all' && !item.dataset.focusAreas.split(' ').includes(focus);
+    });
+    const visibleRoles = [...experienceCards].filter(card => !card.hidden).length;
+    filterStatus.textContent = `${visibleRoles} roles shown / ${button.textContent}`;
+}
+
+focusButtons.forEach(button => {
+    button.addEventListener('click', () => filterExperience(button));
+});
+
+function revealLinkedExperience(hash) {
+    const target = document.getElementById(hash.slice(1));
+    if (target && target.closest('.experience-card[hidden]')) {
+        filterExperience(focusButtons[0]);
+        target.scrollIntoView();
+    }
+}
+
+filterExperience(focusButtons[0]);
+document.querySelector('.work-filters').hidden = false;
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', () => revealLinkedExperience(link.hash));
+});
+window.addEventListener('hashchange', () => revealLinkedExperience(window.location.hash));
+revealLinkedExperience(window.location.hash);
